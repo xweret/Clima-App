@@ -19,11 +19,28 @@ const setWeatherData = data => {
         humidity: data.main.humidity,
         pressure: data.main.pressure,
         temperature: data.main.temp,
-        date: 'data',
+        date: getDate(),
     }
     Object.keys(weatherData).forEach(key => {
         document.getElementById(key).textContent = weatherData[key];
     });
+
+    cleanerUp();
+}
+
+// Al finalizar la carga de los datos de la apy llamamos a cleaner up
+// Cleaner up es una funcion que se ejecuta cuando termina de cargar los datos, oculta el loader y muestra el contenedor
+
+const cleanerUp = () => {
+    let container = document.getElementById('container');
+    let loader = document.getElementById('loader');
+        loader.style.display = 'none';
+        container.style.display = 'flex';
+    }
+
+const getDate = () => {
+    let date = new Date();
+    return `${date.getDate()}-${('0' + (date.getMonth()+1)).slice(-2)}-${date.getFullYear()}`;
 }
 
 
