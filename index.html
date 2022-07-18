@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- wheater.app -->
     <title>Clima App</title>
+    <!-- link to roboto font from google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!-- link to css -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    prueba
+<body onload="onLoad()">
+    <div id="container">
+        <div id="location"></div>
+        <div id="description"></div>
+        <div id="humidity"></div>
+        <div id="pressure"></div>
+        <div id="temperature"></div>
+        <div id="date"></div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
